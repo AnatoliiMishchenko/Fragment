@@ -38,7 +38,8 @@ class MainActivity : AppCompatActivity() {
         }
         bottomMenu.selectedItemId =
             savedInstanceState?.getInt(
-                LAST_SELECTED_ITEM) ?: R.id.menu
+                LAST_SELECTED_ITEM
+            ) ?: R.id.menu
     }
 
 
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        outState.putInt(LAST_SELECTED_ITEM,bottomMenu.selectedItemId)
+        outState.putInt(LAST_SELECTED_ITEM, bottomMenu.selectedItemId)
         super.onSaveInstanceState(outState)
     }
 }
